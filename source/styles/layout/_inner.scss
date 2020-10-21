@@ -1,0 +1,25 @@
+///
+/// Stater Kick with gulp, sass and pug
+/// https://github.com/yudiantara-gde
+/// Free for personal and commercial use under the CCA 3.0 license
+///
+
+/* Inner (container) */
+
+.inner {
+    max-width: em(1400);
+    margin: 0 auto;
+    padding: 0 em(30);
+
+    @include breakpoint('<=xlarge') {
+        max-width: em(1200);
+    }
+
+    @include breakpoint('<=large') {
+        max-width: 100%;
+    }
+
+    @include breakpoint('<=medium') {
+        padding: em(15);
+    }
+}
