@@ -5,11 +5,11 @@
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
 
-/*
-	Stater Kick with gulp, sass and pug
-	https://github.com/yudiantara-gde
-	Free for personal and commercial use under the CCA 3.0 license
-*/
+///
+///	Free Loe Span Landing Page
+///	https://yudiantara-gde.github.io/leo-spa/
+///	Free for personal and commercial use under the CCA 3.0 license
+///
 
 // Breakpoints.
 
@@ -26,6 +26,7 @@
 // fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Rufina:400,700&display=swap');
+@include font-face(icon, icon, normal, normal, eot woff2 woff ttf svg);
 
 // Base.
 
@@ -50,11 +51,11 @@
 	@import 'components/feature-icons';
 
 // Layout.
-
 	@import 'layout/wrapper';
 	@import 'layout/inner';
 
 
-//block
+//block, module and pages
 	@import '../blocks/components/components.scss';
 	@import '../blocks/modules/modules.scss';
+	@import '../blocks/pages/pages';

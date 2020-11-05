@@ -39,6 +39,7 @@
     <meta name="msapplication-TileImage" content="img/fav/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/import/animation.min.css">
     <!--link(rel="stylesheet" type='text/css' href="css/import.css")-->
     <link rel="icon" type="image/png" href="http://localhost:3000/img/logo.png">
     <meta property="og:locale" content="id_ID"><!--[if lt IE 9]>
@@ -46,17 +47,33 @@
   </head>
   <body class="is-preload">
     <div class="fade-in" id="wrapper">
-      <div id="header">
+      <div id="balispa-header">
         <div class="inner">
-          <div class="navbar">
-            <div class="navbar-brand"><a #><img src="img/logo.png" alt="logo" title="logo"></a></div>
-            <div class="navbar-links">
-              <ul id="nav">
-                <li><a href="index.html">Home</a></li>
-                <li> <a href="about-us.html">About Us</a></li>
-                <li><a href="service.html">Our Service</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li> <a href="contact.html">Contact</a></li>
+          <div class="balispa-navbar">
+            <div class="balispa-navbar-brand"><a href="index.html"><img src="img/logo.png" alt="logo" title="logo"></a></div>
+            <div class="balispa-navbar-links">
+              <ul class="sf-menu" id="balispa-nav">
+                <li aria-haspopup="true"><a href="index.html">Our Spa</a>
+                  <ul class="submenu animated fast"> 
+                    <li aria-haspopup="true"><a class="tes" href="#">Why Us</a></li>
+                    <li aria-haspopup="true"><a href="#">Who We Are</a></li>
+                    <li aria-haspopup="true"><a href="#">Best Deals</a></li>
+                    <li aria-haspopup="true"><a href="#">Our Gallery</a></li>
+                    <li aria-haspopup="true"><a href="#">Testimonial</a></li>
+                    <li aria-haspopup="true"><a href="#">Experience</a></li>
+                  </ul>
+                </li>
+                <li class="sf-megamenu" aria-haspopup="true"><a href="service.html">Our Service</a>
+                  <div class="sf-mega">
+                    <div class="balispa-megamenu">
+                      <div class="megamenu"></div>
+                      <div class="megamenu"></div>
+                      <div class="mega-menu"></div>
+                    </div>
+                  </div>
+                </li>
+                <li aria-haspopup="true"><a href="blog.html">Blog</a></li>
+                <li aria-haspopup="true"> <a href="contact.html">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -64,7 +81,20 @@
       </div>
       <div class="p-home" id="main">
         <!--ex : include component-->
-        <!--include ../blocks/components/heroes/home-slider-search-->
+        <section class="balispa-heroes">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="balispa-heroes-wrapper">
+                  <div class="balispa-heroes-img"><img src="img/content/banner-heroes-01.jpg" alt="banner heroes" title="banner heroes"></div>
+                  <div class="balispa-heroes-content">
+                    <div class="inner"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
       <!--popup-->
       <!--include ../../blocks/components/popup/popup-->
@@ -73,7 +103,21 @@
     <script src="js/jquery.scrolly.min.js"></script>
     <script src="js/browser.min.js"></script>
     <script src="js/breakpoints.min.js"></script>
+    <script src="js/superfish.js"></script>
     <script src="js/util.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/swiper.js"></script>
+    <script>
+      var mySwiper = new Swiper('.balispa-heroes .swiper-container', {
+      	spaceBetween: 15,
+      	loop: true,pagination: {
+      		el: '.swiper-pagination',
+      	},
+      	navigation: {
+      		nextEl: '.swiper-button-next',
+      		prevEl: '.swiper-button-prev',
+      	},
+      });
+    </script>
   </body>
 </html>

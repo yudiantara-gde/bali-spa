@@ -1,18 +1,30 @@
-#header
+#balispa-header
     .inner
-        .navbar
-            .navbar-brand
-                a(#)
+        .balispa-navbar
+            .balispa-navbar-brand
+                a(href="index.html")
                     img(src="img/logo.png", alt="logo", title="logo")
-            .navbar-links
-                ul#nav
-                    li
-                        a(href="index.html") Home
-                    li 
-                        a(href="about-us.html") About Us
-                    li
+            .balispa-navbar-links
+                ul#balispa-nav.sf-menu
+                    li(aria-haspopup="true")
+                        a(href="index.html") Our Spa
+
+                        ul.submenu.animated.fast 
+                            li(aria-haspopup="true"): a.tes(href="#") Why Us
+                            li(aria-haspopup="true"): a(href="#") Who We Are
+                            li(aria-haspopup="true"): a(href="#") Best Deals
+                            li(aria-haspopup="true"): a(href="#") Our Gallery
+                            li(aria-haspopup="true"): a(href="#") Testimonial
+                            li(aria-haspopup="true"): a(href="#") Experience
+                            
+                    li.sf-megamenu(aria-haspopup="true")
                         a(href="service.html") Our Service
-                    li
+                        .sf-mega
+                            .balispa-megamenu
+                                .megamenu
+                                .megamenu
+                                .mega-menu
+                    li(aria-haspopup="true")
                         a(href="blog.html") Blog
-                    li 
+                    li(aria-haspopup="true") 
                         a(href="contact.html") Contact

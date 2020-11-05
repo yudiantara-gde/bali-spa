@@ -1,7 +1,7 @@
 ///
-/// Stater Kick with gulp, sass and pug
-/// https://github.com/yudiantara-gde
-/// Free for personal and commercial use under the CCA 3.0 license
+///	Free Loe Span Landing Page
+///	https://yudiantara-gde.github.io/leo-spa/
+///	Free for personal and commercial use under the CCA 3.0 license
 ///
 
 /* Basic */
@@ -40,13 +40,4 @@
 	body {
 		background: _palette(bg);
 		overflow-x: hidden;
-
-		// Stops initial animations until page loads.
-			&.is-preload {
-				*, *:before, *:after {
-					@include vendor('animation', 'none !important');
-					@include vendor('transition', 'none !important');
-				}
-			}
-
 	}

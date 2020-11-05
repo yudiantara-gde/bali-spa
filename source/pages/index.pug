@@ -12,7 +12,20 @@ block variables
 
 block content
 	//ex : include component
-	//include ../blocks/components/heroes/home-slider-search
+	include ../blocks/components/swiper/home-heroes
+		
 
 
 block script
+	script(src='js/swiper.js')
+	script.
+		var mySwiper = new Swiper('.balispa-heroes .swiper-container', {
+			spaceBetween: 15,
+			loop: true,pagination: {
+				el: '.swiper-pagination',
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});

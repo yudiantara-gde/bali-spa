@@ -1,0 +1,30 @@
+section.balispa-heroes {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    .balispa-heroes-wrapper {
+        position: relative;
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        .balispa-heroes-img {
+            width: 100%;
+            height: 100%;
+
+            img {
+                display: block;
+
+                width: 100%;
+                height: 100%;
+
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}

@@ -1,25 +1,218 @@
-ul#nav {
-    @include vendor('display', 'flex');
+// Superfish
+.sf-menu, 
+.sf-menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
 
-    padding: 0 0;
-    margin: 0 0;
+.sf-menu {
+	float: left;
+    position: relative;
+    
+    margin: 0;
+    padding: 0;
     list-style: none;
+}
 
-    li {
-        padding-left: em(15);
+.sf-menu ul {
+	position: absolute;
+	display: none;
+	top: calc(100% + 8px);
+	left: 0;
+    z-index: 99;
 
-        a {
-            display: block;
+	min-width: 192px;
+	*width: 192px;
+    
+	box-shadow: 2px 2px 6px rgba(0,0,0,.2);
+}
 
-            width: 100%;
-            padding: 0 0;
-            margin: 0 0;
-            border-bottom: 0;
+.sf-menu li {
+    position: relative;
+    
+	background: transparent;
+	white-space: nowrap;
+    *white-space: normal;
 
-            font-family: _font(roboto);
-            font-weight: _font(weight-semibold);
-            font-size: rem(14);
-            line-height: rem(24);
-        }
-    }
+    @include vendor('transition', 'background .2s');
+}
+
+.sf-menu > li {
+	float: left;
+}
+
+.sf-menu li:hover,
+.sf-menu li.sfHover {
+    
+    @include vendor('transition', 'none');
+}
+
+.sf-menu li:hover > ul,
+.sf-menu li.sfHover > ul {
+	display: block;
+}
+
+.sf-menu a {
+	display: block;
+    position: relative;
+
+    padding: 12px 16px;
+    font-family: _font(roboto);
+    font-weight: _font(weight-semibold);
+    font-size: rem(14);
+    line-height: 1.75;
+    letter-spacing: rem(1);
+	color: _color(nav-header);
+    text-decoration: none;
+    text-transform: uppercase;
+    zoom: 1;
+    outline: none;
+}
+
+.sf-arrows .sf-with-ul {
+	padding-right: 40px;
+	*padding-right: 40px;
+}
+
+.sf-arrows .sf-with-ul::after {
+	position: absolute;
+	top: 2px;
+    right: 0;
+
+	height: 40px;
+    width: 40px;
+    font-family: _font(icon);
+    font-size: rem(16);
+    line-height: 40px;
+    content: '\F107';
+    color: _color(black);
+    text-align: center;
+}
+
+.sf-with-ul::after {
+
+    @include vendor('transition', 'all .5s');
+    @include vendor('transform', 'rotate(0deg)');
+}
+
+.sf-with-ul:hover::after {
+    
+    @include vendor('transition', 'all .5s');
+    @include vendor('transform', 'rotate(-180deg)'); 
+}
+
+.sf-menu ul li,
+.sf-menu ul ul li {
+	background: transparent;
+}
+
+.sf-menu ul ul {
+	top: 0;
+	left: 100%;
+}
+
+.sf-menu ul,
+.sf-menu ul ul {
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+	background: _color(secondary);
+}
+
+.sf-menu ul li,
+.sf-menu ul ul li {
+    display: block;
+}
+
+.sf-menu ul li a,
+.sf-menu ul ul li a {
+    position: relative;
+
+    padding: 8px 8px 8px 24px;
+    font-size: rem(14);
+    line-height: 24px;
+
+    @include vendor('transition', 'all 0.4s ease-in-out');
+}
+
+.sf-menu ul li a::after,
+.sf-menu ul ul li a::after {
+    
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+
+    width: 24px;
+    height: 24px;
+    font-family: _font(icon);
+    font-size: rem(14);
+    line-height: 24px;
+    text-align: center;
+    color: _color(primary);
+    content: '\F105';
+
+    opacity: 0;
+    @include vendor('transition', 'all 0.4s ease-in-out');
+}
+
+.sf-menu ul li:hover a,
+.sf-menu ul ul li:hover a{
+    padding-left: 40px;
+}
+
+.sf-menu ul li:hover a:after,
+.sf-menu ul ul li:hover a:after{
+    opacity: 1;
+}
+
+// mega menu
+
+.sf-menu > li.sf-megamenu {
+    position: initial !important;
+}
+
+.sf-menu .sf-mega {
+    position: absolute;
+    display: none;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 99;
+}
+
+.sf-menu li:hover > .sf-mega,
+.sf-menu li.sfHover > .sf-mega {
+    display: block;
+}
+
+.sf-menu .sf-mega {
+    box-shadow: 2px 3px 6px rgba(0,0,0,.2);
+    width: 100%;
+}
+
+.sf-menu > li > a {
+    display: block;
+    position: relative;
+
+    padding: 12px 16px;
+    text-decoration: none;
+    zoom: 1;
+    color: _color(black);
+}
+
+.sf-mega {
+    padding: 16px;
+    width: 100%;
+    
+    background-color: #CFDEFF;
+    box-sizing: border-box;
+}
+.sf-mega-section {
+    float: left;
+
+    width: 124px;
+    padding: 0 16px 16px 0;
+    margin-right: 16px;
+    border-right: 1px solid #b4c8f5;
 }

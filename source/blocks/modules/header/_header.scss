@@ -1,26 +1,37 @@
-#header {
+#balispa-header {
     position: fixed;
     top: 0;
     left: 0;
     
     width: 100%;
-    z-index: 2;
+    z-index: 5;
+
+    background: _color(white);
+    
+    @include vendor('transition', 'all .5s');
 
     .inner {
 
-        .navbar {
+        .balispa-navbar {
             position: relative;
             @include vendor('display', 'flex');
             @include vendor('flex-wrap', 'wrap');
             @include vendor('flex-direction', 'row');
+            @include vendor('align-items', 'center');
 
             width: 100%;
-            padding: 20px 0;
+            padding: 0 0;
+            height: 64px;
 
             //navbar-brand / logo
-            .navbar-brand {
-                width: 109px;
-                height: 77px;
+            .balispa-navbar-brand {
+                position: absolute;
+                top: 4;
+                left: 0;
+
+                width: 87px;
+                height: 56px;
+                z-index: 2;
 
                 a {
                     position: relative;
@@ -48,14 +59,22 @@
             }
 
             //navbar-links
-            .navbar-links {
-                @include vendor('display', 'flex');
-                @include vendor('flex-wrap', 'wrap');
-                @include vendor('flex-direction', 'row');
-                align-items: center;
-                justify-content: flex-end;
+            .balispa-navbar-links {
+                width: 100%;
 
-                width: calc(100% - 109px);
+
+                // Navigation
+                ul#balispa-nav {
+                    @include vendor('display', 'flex');
+                    @include vendor('flex-wrap', 'wrap');
+                    @include vendor('flex-direction', 'row');
+                    justify-content: flex-end;
+
+                    width: 100%;
+                    padding: 0 0 0 calc(32px + 87px); 
+                    margin: 0 0;
+                    list-style: none;
+                }
             }
         }
     }

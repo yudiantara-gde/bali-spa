@@ -1,3 +1,12 @@
+///
+///	Free Loe Span Landing Page
+///	https://yudiantara-gde.github.io/leo-spa/
+///	Free for personal and commercial use under the CCA 3.0 license
+///
+
+/* Variable */
+$path-font: '../fonts/';
+
 // Misc.
 $misc: (
 	z-index-base:				10000,
@@ -32,6 +41,7 @@ $font: (
 	family-fixed:				('Roboto New', monospace),
 	family-heading:				('Rufina', Helvetica, sans-serif),
 	family-form:				('Roboto', Helvetica, sans-serif),
+	icon:						('icon'),
 	roboto:						('Roboto', Helvetica, sans-serif),
 	rufina:						('Rufina', Helvetica, sans-serif),
 	weight-light:				300,
@@ -65,9 +75,12 @@ $palette: (
 // Color
 $color: (
 	default: 				#000000,
-	primary: 				#000000,
-	secondary: 				#000000,
-	tertiary: 				#000000,
+	primary: 				#ff817e,
+	secondary: 				#fcf5ee,
 	black:					#000000,
 	white:					#ffffff,
+	nav-header:				#232a34,
 );
+
+//swiper themes color
+$themeColor: 				#007aff !default;
