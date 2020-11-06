@@ -1,31 +1,23 @@
-///
-/// Stater Kick with gulp, sass and pug
-/// https://github.com/yudiantara-gde
-/// Free for personal and commercial use under the CCA 3.0 license
-///
+.row {
+	@include html-grid(32px);
 
-/* Row */
-
-	.row {
-		@include html-grid(2rem);
-
-		@include breakpoint('<=xlarge') {
-			@include html-grid(2rem, 'xlarge');
-		}
-
-		@include breakpoint('<=large') {
-			@include html-grid(1.5rem, 'large');
-		}
-
-		@include breakpoint('<=medium') {
-			@include html-grid(1.5rem, 'medium');
-		}
-
-		@include breakpoint('<=small') {
-			@include html-grid(1.25rem, 'small');
-		}
-
-		@include breakpoint('<=xsmall') {
-			@include html-grid(1.25rem, 'xsmall');
-		}
+	@include breakpoint('<=xlarge') {
+		@include html-grid(32px, 'xlarge');
 	}
+
+	@include breakpoint('<=large') {
+		@include html-grid(24px, 'large');
+	}
+
+	@include breakpoint('<=medium') {
+		@include html-grid(16px, 'medium');
+	}
+
+	@include breakpoint('<=small') {
+		@include html-grid(8px, 'small');
+	}
+
+	@include breakpoint('<=xsmall') {
+		@include html-grid(8px, 'xsmall');
+	}
+}
